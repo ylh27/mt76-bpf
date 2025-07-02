@@ -23,7 +23,7 @@ char LICENSE[] SEC("license") = "GPL";
 //SEC("fexit/__x64_sys_execve")
 //SEC("fexit/tcp_sendmsg")
 //SEC("fexit/dev_hard_start_xmit")
-SEC("kprobe/mt76_release_buffered_frames")
+SEC("kprobe/ieee80211_tx")
 int BPF_PROG(fexit_test) {
   struct message msg = {};
 
